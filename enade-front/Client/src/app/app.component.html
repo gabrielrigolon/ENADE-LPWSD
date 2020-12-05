@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a routerLink="ResultadoList" class="nav-link" routerLinkActive="active">Lista Usuários</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="ResultadoCreate" class="nav-link" routerLinkActive="active">Add Usuários</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="provaCreate" class="nav-link" routerLinkActive="active">Lista Prova</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="provaList" class="nav-link" routerLinkActive="active">Add Prova</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="questaoList" class="nav-link" routerLinkActive="active">Lista Questao</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="questaoCreate" class="nav-link" routerLinkActive="active">Add Questao</a>
+    </li>
+  </ul>
+</nav>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <span>ENADE @2020</span>
+  </div>
+</footer>

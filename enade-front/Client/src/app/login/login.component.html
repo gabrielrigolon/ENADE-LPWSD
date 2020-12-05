@@ -1,0 +1,30 @@
+<body>
+  <!-- <div [hidden]="winauth" class="container imagem" style="background-image: url(./assets/img/imagemFundoLogin.png)"> -->
+  <div class="row col-md-12" style="display: flex; padding-right: 0; margin-top: 50px">
+    <div class="col-md-3 col-sm-5 col-5 text-center" style="margin: auto">
+      <!-- <img id="profile-img" class="profile-img-card imagem" src="Logo-01.svg" /> -->
+    </div>
+  </div>
+  <div class="row text-center">
+    <label id="labelBemVindo" class="text-center" style="margin: 9px 0 16px 0">Bem-vindo!</label>
+  </div>
+  <div class="row">
+    <form class="form-signin" #loginForm="ngForm" (submit)="logar()">
+      <span id="reauth-email" class="reauth-email"></span>
+      <label id="labelUsuario" class="labelLogin" for="inputUsuario">Login</label>
+      <input #loginInput type="text" name="inputUsuario" required class="form-control inputLogin" placeholder="Login"
+        [(ngModel)]="usuario.user">
+
+      <label id="labelPassword" class="labelLogin" for="inputPassword">Senha</label>
+      <input #senhaInput type="password" name="inputPassword" required class="form-control inputLogin"
+        placeholder="Senha" [(ngModel)]="usuario.password" autocomplete="on">
+      <div class="row text-center" *ngIf="!valido">
+        <p style="color: red">Login ou senha incorretos</p>
+      </div>
+      <div class="row form-group">
+        <button id="buttonLogin" class="btn btn-lg btn-primary btn-block btn-signin mouse-pointer"
+          [disabled]="!loginForm.valid" type="submit">Logar</button>
+      </div>
+    </form>
+  </div>
+</body>

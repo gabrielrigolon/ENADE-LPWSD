@@ -1,0 +1,12 @@
+<h3>Criar Prova</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="name">Data</label>
+      <input type="date" class="form-control" id="initialdate" required [(ngModel)]="prova.data" name="InitialDate">
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>
